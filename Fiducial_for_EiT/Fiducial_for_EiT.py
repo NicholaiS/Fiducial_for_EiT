@@ -4,8 +4,8 @@ from MarkerTracker import MarkerTracker
 
 # For the Secchi marker the location of the marker and indication of the quality
 # of the detected marker is visuallized by altering the line color.
-# Yellow: bad marker quality
-# Red: high marker quality
+# Red: bad marker quality
+# Green: high marker quality
 
 def main():
     cap = cv2.VideoCapture(0)
@@ -51,7 +51,7 @@ def main():
 
             pose = tracker.locate_marker(grayscale_image)
 
-            color = (0, 255 - int(255 * pose.quality), 255)
+            color = (0, int(255 * pose.quality), 255 - int(255 * pose.quality))
             cv2.line(frame, (0, 0), (pose.x, pose.y), color, 2)
             print(f"Secchi marker center: ({pose.x}, {pose.y})")
 
