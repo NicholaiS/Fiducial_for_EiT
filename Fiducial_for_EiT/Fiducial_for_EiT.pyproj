@@ -21,11 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="aruco.py" />
     <Compile Include="Fiducial_for_EiT.py" />
     <Compile Include="MarkerPose.py" />
     <Compile Include="MarkerTracker.py" />
-    <Compile Include="n-fold.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
